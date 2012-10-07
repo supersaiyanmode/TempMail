@@ -1,51 +1,68 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    
+     <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:maxLines="10"
+            android:text="TextView"/>
+           
+     <ListView
+            android:id="@+id/list"
+            android:layout_below="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:cacheColorHint="#0000"
+            android:clipToPadding="true"
+            android:layout_margin="5dp"
+            android:scrollbars="vertical"
+            android:layout_gravity="fill_vertical"
+            android:soundEffectsEnabled="true"/>
+
+</LinearLayout>
+
+
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="182dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="0.09"
-            android:maxLines="10"
-            android:text="TextView" />
+        
+         <Button
+            android:id="@+id/button1"
+            android:layout_below="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get New Email" />    
 
         <Button
             android:id="@+id/button2"
+            android:layout_below="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="84dp"
             android:text="Copy to ClipBoard" />
 
         <Button
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:text="Get New Email" />
-
-        <Button
             android:id="@+id/button4"
+            android:layout_below="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="29dp"
             android:text="Exit" />
 
     </LinearLayout>
+
 
 </RelativeLayout>
