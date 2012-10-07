@@ -76,7 +76,10 @@ public class TenMinuteMailDotNet implements EmailAgent {
         Log.i("test-debug", "Mail count: " + mails.length);
         for (Mail mail: mails){
             if (!emails.containsKey(mail.getMail_id())){
-                Email email = new Email(mail.getMail_id(), mail.getFrom(), mail.getDatetime(), mail.getSubject(), "");
+                Response res = Jsoup.connect("http://10minutemail.net/mail.api.php?mailid=" + mail.getMail_id())
+                        .cookies(cookies).method(Method.GET).execute();
+                MailBody body = new Gson().fromJson(res.body(), MailBody.class);
+                Email email = new Email(mail.getMail_id(), mail.getFrom(), mail.getDatetime(), mail.getSubject(), body.getHtml()[0]);
                 emails.put(email.getKey(), email);
                 newEmails.add(email);
             }

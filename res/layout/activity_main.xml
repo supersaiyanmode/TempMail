@@ -3,66 +3,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
 
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    
-    
-     <TextView
+        <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:maxLines="10"
-            android:text="TextView"/>
-           
-     <ListView
+            android:text="TextView" />
+
+        <ListView
             android:id="@+id/list"
-            android:layout_below="@+id/textView1"
             android:layout_width="fill_parent"
             android:layout_height="200dip"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
             android:cacheColorHint="#0000"
             android:clipToPadding="true"
-            android:layout_margin="5dp"
             android:scrollbars="vertical"
-            android:layout_gravity="fill_vertical"
-            android:soundEffectsEnabled="true"/>
+            android:soundEffectsEnabled="true" >
+        </ListView>
 
-</LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical" >
-
-        
-         <Button
+        <Button
             android:id="@+id/button1"
-            android:layout_below="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Get New Email" />    
+            android:layout_below="@+id/list"
+            android:text="Get New Email" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_below="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
             android:text="Copy to ClipBoard" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_below="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/button2"
             android:text="Exit" />
-
     </LinearLayout>
-
 
 </RelativeLayout>

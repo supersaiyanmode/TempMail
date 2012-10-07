@@ -1,8 +1,9 @@
 package com.inkredus.android.tempMail;
 
 public class EmailManagerNotReadyException extends Exception {
+    private static final long serialVersionUID = -1000920445795641692L;
 
-	public EmailManagerNotReadyException() {
+    public EmailManagerNotReadyException() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -20,13 +20,14 @@ public final class R {
         public static final int button4=0x7f070004;
         public static final int emailLabel=0x7f070008;
         public static final int fromLabel=0x7f070006;
-        public static final int idfrom=0x7f070009;
+        public static final int idfrom=0x7f07000b;
         public static final int idsub=0x7f07000a;
         public static final int linear=0x7f070005;
         public static final int list=0x7f070001;
-        public static final int menu_settings=0x7f07000b;
+        public static final int menu_settings=0x7f07000c;
         public static final int subjectLabel=0x7f070007;
         public static final int textView1=0x7f070000;
+        public static final int webViewEmailBody=0x7f070009;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

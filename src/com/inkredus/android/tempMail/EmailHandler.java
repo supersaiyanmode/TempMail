@@ -87,7 +87,7 @@ public class EmailHandler {
 						emailListener.onNewEmail(e);
 					}
 				}
-				startPolling(); //recurse.. dirty!
+				startPolling(); // start over!
 			}
 		}.execute(emailAgent);
 	}
